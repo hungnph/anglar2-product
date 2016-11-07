@@ -3,15 +3,15 @@ import {Component} from '@angular/core';
 @Component({
     selector : 'app',
     template: `
-        <h1>
-            {{greet()}}
-        </h1>
+        <div>
+            <h1>{{greet()}}</h1>
+            <app-product></app-product>
+        </div>
     `
 })
 export class AppComponent {
-    str : string = "Hello world!";
-
+    pageTitle : string = "Product management";
     greet() : string {
-        return this.str;
+        return this.pageTitle;
     }
 }
