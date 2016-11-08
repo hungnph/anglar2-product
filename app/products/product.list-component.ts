@@ -1,12 +1,23 @@
 import {Component} from '@angular/core';
+import {OnInit} from '@angular/core';
+import {IProduct} from './product';
 
 @Component({
     selector : 'app-product',
-    templateUrl: 'app/product/product-list.component.html'
+    templateUrl: 'app/products/product.list-component.html',
+    styleUrls : ['app/products/product.list-component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit{
     pageTitle : string = "List of products";
-    products : any[] = [
+    showImage : boolean = false;
+    toggleImage() : void {
+        this.showImage = !this.showImage;
+    }
+    filterBy : string ='';
+    ngOnInit() : void {
+        console.log ("Initialisation of Component");
+    }
+    products : IProduct[] = [
         {
             "id": 1,
             "productName": "Leaf Rake",

@@ -10,18 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
-var product_list_component_1 = require('./product/product-list.component');
+var product_list_component_1 = require('./products/product.list-component');
+var product_pipe_filter_1 = require('./products/product.pipe-filter');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule
             ],
             declarations: [
-                app_component_1.AppComponent, product_list_component_1.ProductListComponent
+                app_component_1.AppComponent,
+                product_list_component_1.ProductListComponent,
+                product_pipe_filter_1.ProductPipeFilter
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
